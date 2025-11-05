@@ -1,0 +1,48 @@
+defaults:
+  - /data: totalseg_hu200_3000
+  - /optim: sgd_nnunet
+  - /runners: cnn_seg_runner
+  - /seg_model: spconv_unet
+  - /lr_scheduler: polylr_scheduler
+  - /eval: eval_on_test
+  - _self_
+
+tables_path: "tables"
+table_metrics: 
+  # - val/seg/bones_overallDice(%)
+  - test/seg/bones_overallDice(%)
+  # - val/seg/limbs_overallDice(%)
+  - test/seg/limbs_overallDice(%)
+  # - val/seg/spine_overallDice(%)
+  - test/seg/spine_overallDice(%)
+  # - val/seg/ribs_overallDice(%)
+  - test/seg/ribs_overallDice(%)
+
+save_interval: 50
+wandb_id: null
+steps_per_epoch: 1335
+steps_per_validation: 50
+min_steps: 12000
+max_epochs: 100_000
+min_epochs_before_save: 50
+
+enable_vis: false
+
+# Every how many steps to log training metrics
+enable_data_prefetch: false
+use_amp: false
+batch_size: 6
+
+train_only: false
+device: "cuda"
+debug: false
+seed: 42 # Note that this doesn't affect the dataset split
+
+limit_num_samples: null
+
+use_wandb: False
+fold_idx: 0
+exp_name: spconv_unet
+root_path: /mnt/sdb/Bonnet-master
+checkpoint_path: null
+checkpoints_dir: ${root_path}/${exp_name}

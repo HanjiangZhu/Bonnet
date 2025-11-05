@@ -1,0 +1,4 @@
+_target_: polylr_scheduler.PolyLRScheduler
+initial_lr: ${..optim.optimizer.lr}
+max_steps: ${..max_epochs}
+exponent: 0.9

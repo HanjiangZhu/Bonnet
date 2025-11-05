@@ -1,0 +1,6 @@
+_target_: reduce_lr_on_plateau.ReduceLROnPlateau
+factor: 0.5
+patience: 20
+min_lr: 1e-6
+initial_lr: 0.1
+# 0.001563

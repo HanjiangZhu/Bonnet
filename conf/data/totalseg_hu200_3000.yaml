@@ -1,0 +1,32 @@
+_target_: data.ctdataset.CTDataset
+
+cache_params: # Params that may require re-caching
+  batch_specs:
+    - sparse_voxel
+  hu_min: 200
+  hu_max: 3000
+
+cache_filename_dict:
+  batch_specs:
+    - sparse_voxel
+  hu_min: 200
+  hu_max: 3000
+
+oversample_foreground_rate: 0.33
+
+max_shift: 0.0
+fixate_window_to_0: false
+max_points_dropout: 0.3
+max_points_count: 100_000_000
+max_points_feature_swap_rate: 0.0
+
+test_window_overlap: 0.5
+test_num_point_perms: 1
+test_max_points: 1000000
+test_dropout_per_perm: 0
+
+window_size: [128,128,128]
+caching_pool_size: 8
+dataset_path: ${..root_path}/DS_ORIGINAL/
+cache_path: ${..root_path}/CACHE/
+num_workers: 6

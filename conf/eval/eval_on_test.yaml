@@ -1,0 +1,4 @@
+eval_only: false
+gauss_kernel_inference: true
+gauss_kernel_std_scale: 0.5
+target_split: "test"

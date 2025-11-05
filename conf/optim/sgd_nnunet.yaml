@@ -1,0 +1,10 @@
+optimizer:
+  _target_: torch.optim.SGD
+  weight_decay: 3e-5
+  momentum: 0.99
+  nesterov: true
+  lr: 1e-2
+
+early_stopping:
+  # Early stopping parameters
+  patience: 30

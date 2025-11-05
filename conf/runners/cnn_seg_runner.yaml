@@ -1,0 +1,5 @@
+_target_: runners.cnn_seg_runner.CNN_SegRunner
+
+loss_cfg:
+  _target_: losses.seg_loss.SegmentationLoss
+  label_smoothing: 0.0

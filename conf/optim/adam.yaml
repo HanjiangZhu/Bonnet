@@ -1,0 +1,9 @@
+optimizer:
+  _target_: apex.optimizers.FusedAdam
+  betas: [0.9, 0.999]
+  lr: 1e-2
+  weight_decay: 3e-5
+
+early_stopping:
+  # Early stopping parameters
+  patience: 30

@@ -1,0 +1,10 @@
+_target_: lr_scheduler.CosineAnnealingWarmupRestarts
+first_cycle_steps: 250
+cycle_mult: 1.0
+max_lr: 1e-2
+min_lr: 1e-6
+warmup_steps: 125
+gamma: 1
+reduce_lr_on_plateau: false
+plateau_factor: 0.5
+plateau_patience: 20
