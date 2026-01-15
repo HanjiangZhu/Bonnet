@@ -8,7 +8,7 @@ Bonnet is an ultra-fast whole-body bone segmentation pipeline for CT scans. It r
 
 - `Bonnet/conf/config_eva.yaml`
 
-1. Run:
+2. Run:
 
 ```
 python main.py
@@ -20,13 +20,13 @@ python main.py
 
 - `Bonnet/conf/eval/eval_on_test.yaml`
 
-1. Set:
+2. Set:
 
 ```
 eval_only: True
 ```
 
-1. Run:
+3. Run:
 
 ```
 python main.py
